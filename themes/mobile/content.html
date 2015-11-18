@@ -14,6 +14,7 @@
 <body>
 <div class="g-hd u-box f-cb f-container">
 	<h1 class="m-logo">{$sys.site_title}</h1>
+
 	<div class="m-nav"> <a href="javascript:;" id="menu"></a> </div>
 </div>
 <div class="m-crumb u-box f-cb f-container">
@@ -26,11 +27,12 @@
 </div>
 <div class="m-box u-box f-container">
 	<h3>{$contentInfo.title}</h3>
-	<div class="tips"> {$contentInfo.content} </div>
-	<br/>
-	<a href="/index.php?r=page/Category/index&class_id=5" title="果拾网阅读与打赏" target="_blank" class="tips">如果您觉得本站的内容对您有所帮助，您可以点击此处扫二维码予以打赏，感谢！</a>
-	<br/>
-	承诺：凡打赏捐助的朋友，都有礼品赠送！
+	<div> {$contentInfo.content} </div>
+	<hr/>
+	<div class="tips"><a href="/index.php?r=page/Category/index&class_id=5" title="果拾网阅读与打赏" target="_blank" class="tips">如果您觉得本站的内容对您有所帮助，您可以点击此处扫二维码予以打赏，感谢！</a>
+		<br/>
+		承诺：凡打赏捐助的朋友，都有礼品赠送！
+	</div>
 </div>
 <div class="g-fb u-box">
 	<div class="cprt">COPYRIGHT 贠王军 ALL RIGHTS RESERVED!</div>
@@ -53,7 +55,7 @@
 	</ul>
 </div>
 </body>
-<script src="js/jquery-1.8.3.min.js"></script>
+<script src="__PUBLIC__/js/jquery.js"></script>
 <script src="js/slidebars.min.js"></script>
 <script>
 $(document).ready(function(){
