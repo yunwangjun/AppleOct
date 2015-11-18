@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="20870e66-22b8-4ced-85a9-7e688ed79629" name="王军贠王军yunwangjun" url="http://qxu1146560059.my3w.com">
+        <fileTransfer host="qxu1146560059.my3w.com" port="21" rootFolder="/htdocs" password="dfd2df98dfc9df98dfdcdf9ddfc8df9f" username="qxu1146560059">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

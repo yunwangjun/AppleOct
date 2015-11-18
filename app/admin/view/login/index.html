@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>果拾网</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width"/>
+<link rel="stylesheet" href="__PUBLIC__/common/css/pintuer.css"/>
+<link rel="stylesheet" href="__PUBLIC__/lib/css/login.css"/>
+<!--[if lt IE 8]>
+<script type="text/javascript">
+    alert('请您升级到IE8或以上版本!');
+    window.open("http://www.baidu.com/search/theie6countdown.html","_self");
+</script>
+<![endif]-->
+<script language="javascript">
+    //重载验证码
+    function fleshVerify()
+    {
+        var timenow = new Date().getTime();
+        document.getElementById('verifyImg').src= "{url('login/verify')}/"+timenow;
+    }
+    //提交数据前，对数据进行检查
+    $(function() {
+        $(".button").click(function() {
+            var params = $.("#checkcode").val();
+            if(!params){
+                $("#backdata").html("请输入验证码");
+            }
+
+        });
+    });
+</script>
+</head>
+<body>
+<div class="dux-login">
+            <div class="media media-y">
+                <a href="http://www.duxcms.com" target="_blank"><img src="__PUBLIC__/lib/images/login.png" alt="后台管理系统" /></a>
+            </div>
+            <br /><br />
+            <form action="{url()}" method="post">
+                   <div class="input-block">
+                    <input type="text" class="input" id="username" name="username" size="20" maxlength="30" placeholder="用户名" />
+                    <input type="password" class="input" id="password" name="password" size="20" maxlength="30" placeholder="密码" />
+                    <input type="text" class="input" id="checkcode" name="checkcode" size="4" maxlength="4" placeholder="验证码" />
+                       <img src="{url('index/verify')}" border="0"  height="25" width="50" style=" cursor:hand;" alt="如果您无法识别验证码，请点图片更换" onClick="fleshVerify()" id="verifyImg"/>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                        <button class="button button-block bg-main text-big">登录</button>
+                    </div>
+                <div id="backdata"></div>
+            </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh_cn">
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<meta name="keywords" content="base64在线加密,base64在线解密,base64在线破解"/>
+<meta name="description" content="KJSON提供在线base64加密解密服务">
+<title>Base64加密、Base64解密 - 果拾网 |  贠王军 Blog - 成为地球卓越的Web开发者！</title>
+
+<link rel="shortcut icon" href="http://s.kjson.com/favicon.png" type="image/x-icon">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="css/kjson.css" />
+<style type="text/css">
+#encode, #decode {
+    width:100%;
+    height:200px;
+}
+</style>
+
+
+
+   
+</head>    
+<body>
+
+
+<nav role="navigation" class="container-fluid navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="nav-header">
+            <span class="navbar-brand">JSON在线解析<em>贠王军 Blog</em></span>
+        </div>
+
+        <div class="navbar-collapse collapse">
+             <ul class="nav navbar-nav" style="margin-left: 20%;">
+                
+                <li class=''><a href='/' target='_self'>首页</a></li>
+                <li class=''><a href='/tools/jsonparser/index.html' target='_self'>JSON在线视图</a></li>
+                <li class=''><a href='/tools/jsoneditor/index.html' target='_self'>JSON在线编辑</a></li>
+                <li class=''><a href='/tools/jsformat/index.html' target='_self'>HTML/JS格式化</a></li>
+                <li class=''><a href='/tools/encrypt/md5tool/index.html' target='_self'>MD5加密</a></li>
+                <li class='active'><a href='/tools/encrypt/base64/index.html' target='_self'>Base64</a></li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- 
+<div class="container" style="margin-bottom: 10px;">
+    <code>本站交流QQ群：34768497</code>
+</div> -->
+
+
+<div class="tools_content">
+    <div style="text-align:left; margin-top:10px;">
+        <label for="encode" class="encode">Encode:</label><br/>
+        <textarea id="encode"></textarea>
+        
+        <br/>
+        <input type="button" value="加密" class="btn-encode">
+        <input type="button" value="解密" class="btn-decode">
+        <input type="button" value="清除" class="btn-clear">
+        
+        <br/>
+        <label for="decode" class="decode">Decode:</label>
+        <br/>
+        
+        <textarea id="decode"></textarea>
+    </div>
+</div>
+
+
+<div class="page-header"></div>
+
+<footer>
+    <div class="container-fluid">
+        <p class="text-center flink"><a href="http://www.miitbeian.gov.cn" target="_blank">陕ICP备12012840号-1</a>
+            Copyright © 2012-2015 果拾网
+        </p>
+        
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.base64.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+(function(){
+    var dec = $("#decode"),
+        enc = $('#encode');
+    
+        $.base64.utf8encode = !0;
+        
+        var en = function(){
+            dec.val( $.base64.btoa(enc.val()) );
+        };
+        var de = function(){
+            enc.val( $.base64.atob(dec.val(), true) );s
+        };
+        
+        enc.keyup(function(){
+            en();
+        });
+        dec.keyup(function(){
+            de();
+        });
+        
+        $(".btn-encode").click(function(){
+            en();
+        });
+        $(".btn-decode").click(function(){
+            de();
+        });
+        $(".btn-clear").click(function(){
+            dec.val('');
+            enc.val('');
+        });
+    
+})();
+</script>
+</body>
+</html>
