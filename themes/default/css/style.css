@@ -110,7 +110,7 @@ width: 20px; text-align: center; font-size: 12px; color: #ccc; font-family: \5b8
 .m-pg-rlt .tt a { color:#cd1a1c}
 .m-pg-rlt .lst { padding-top:5px;}
 .m-pg-rlt .lst li { line-height:25px; height:25px;}
-.m-pg-bd pre{ max-width: 100% }
+.m-pg-bd pre{ max-width: 100%;background: #363F48 none repeat scroll 0% 0%;color: #FFF;border-radius: 6px;white-space: pre-wrap;word-wrap: break-word;line-height: 140%;padding: 2% 2.5%;}
 .m-pg-bd img{ max-width: 100% }
 .m-pg-bd table{ max-width: 100% }
 /* TAG列表 */
