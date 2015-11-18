@@ -6,7 +6,7 @@ return array(
 	'DB_USER'=>'root',
 	'DB_PWD'=>'root',
 	'DB_PORT'=>3306,
-	'DB_NAME'=>'duxcms',
+	'DB_NAME'=>'wangjun',
 	'DB_CHARSET' => 'utf8',
 	'DB_PREFIX'=>'dux_',
 );
